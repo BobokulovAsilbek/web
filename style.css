@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    width: 10000x;
+    height: 3000px;
+    align-items: center;
+    justify-content: center;
+    background-color: hwb(115 59% 7%);
+    flex-wrap: wrap;
+}
+div{
+    border-radius: 50px;
+    display: flex;
+}
+.sol1{
+    width: 1200px;
+    height: 600px;
+    background-color: rgb(0, 0, 0);
+    border: 5px solid black;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+h1{
+    color: white;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.snippet{
+    display: block;
+    padding: 0rem 2rem;
+    overflow: auto;
+    font-size: 1.0em;
+    font-family: monospace;
+    white-space: pre;
+    background: lightgoldenrodyellow;
+    color: saddlebrown;
+    border-radius: 8px;
+}

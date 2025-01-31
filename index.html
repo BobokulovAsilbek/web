@@ -1,50 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <title>Document</title>
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <h1>About Me<img src="https://png.pngtree.com/png-vector/20220817/ourmid/pngtree-man-avatar-with-circle-frame-vector-ilustration-png-image_6110328.png" style="width: 70px; height: 70px;" alt=""></h1>
-            
-        </div>
-    </header>
-    <div class="container main">
-        <h1>Hello, I'm Asilbek</h1>
-        <p>Welcome to my personal page! I am someone very important with a passion for something.</p>
-        <p>In my free time, I love to do something very interesting. Feel free to explore <a href="#">my page!</a></p>    
-        <table style="border: 1px solid black;">
-            <tr><th>age:</th><th>19</th></tr>
-            <tr><th>Interest</th><th>CS</th></tr>
-            <tr><th>Experience:</th><th>No experience</th></tr>
-            <tr><th>Hobbies:</th><th>Nothing</th></tr>
-            <tr><th>Future interest:</th><th>Learning web</th></tr>
-            <tr><th>Course expectation:</th><th>Nothing</th></tr>
-        </table>
-    </div>
-    <div class="container video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wsTv9y931o8?si=7tUPtw8CJbiZHXEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <footer style="background-color: gray; text-align: center; padding: 20px;">
-        <a href="https://youtube.com" target="_blank" style="margin-right: 25px;">
-            <i class="fa-brands fa-youtube" style="font-size: 40px; width: 40px; height: 40px;"></i>
-        </a>
-        <a href="https://facebook.com" target="_blank" style="margin-right: 25px;">
-            <i class="fa-brands fa-facebook" style="font-size: 40px; width: 40px; height: 40px;"></i>
-        </a>
-        <a href="https://twitter.com" target="_blank">
-            <i class="fa-brands fa-twitter" style="font-size: 40px; width: 40px; height: 40px;"></i>
-        </a>
-    </footer>
+    <div class="sol1">
+        <h1>Problem 4 Solution</h1>
+        <section class="snippet">
+            <code><p oncopy="myFunction()">
+    // Define a function that animates the characters of a string
+        function animate_string(id) {
     
-</body>
+        // Get the HTML element by its id    
+        var element = document.getElementById(id);
 
+         // Access the text node inside the element (assuming no other children)
+        var textNode = element.childNodes[0];
+ 
+        // Extract the initial text content of the text node
+        var text = textNode.data;
+
+        // Set up an interval to rotate the characters in the text every 100 millisecondssetInterval(function () {
+        // Move the last character to the beginning of the string
+        text = text[text.length - 1] + text.substring(0, text.length - 1);
+
+        // Update the text content of the text node with the modified string
+        textNode.data = text;
+        }, 100);
+    }</p></code>
+        </section>
+    </div>
+
+    <div class="sol1">
+        <h1>Problem 5 Solution</h1>
+        <section class="snippet">
+            <code><p oncopy="myFunction()">
+    // Define a function that animates the characters of a string
+    function animate_string(id) {
+        // Get the HTML element by its id
+        var element = document.getElementById(id);
+    
+        // Access the text node inside the element (assuming no other children)
+        var textNode = element.childNodes[0];
+        
+        // Extract the initial text content of the text node
+        var text = textNode.data;
+    
+        // Set up an interval to rotate the characters in the text every 100 milliseconds
+        setInterval(function () {
+            // Move the last character to the beginning of the string
+            text = text[text.length - 1] + text.substring(0, text.length - 1);
+    
+            // Update the text content of the text node with the modified string
+            textNode.data = text;
+        }, 100);
+    }</p></code>
+        </section>
+    </div>
+
+    <div class="sol1">
+        <h1>Problem 6 Solution</h1>
+        <section class="snippet">
+            <code><p oncopy="myFunction()">
+    // Log a separator to visually distinguish the output
+    console.log('--------------------');
+    
+    // Loop through the years from 2014 to 2050 (inclusive)
+    for (var year = 2014; year <= 2050; year++) {
+        // Create a Date object for January 1st of the current year
+        var d = new Date(year, 0, 1);
+    
+        // Check if January 1st is a Sunday (where Sunday corresponds to day index 0)
+        if (d.getDay() === 0) {
+            // Log a message if January 1st is a Sunday for the current year
+            console.log("1st January is being a Sunday  " + year);
+        }
+    }
+    
+    // Log another separator to conclude the output
+    console.log('--------------------'); 
+            </p></code>
+        </section>
+    </div>
+
+    <div class="sol1">
+        <h1>Problem 7 Solution</h1>
+        <section class="snippet">
+            <code><p oncopy="myFunction()">
+    // Define a function to check if a given year is a leap year
+    function leapyear(year) {
+        // Return true if the year is divisible by 4 but not divisible by 100 unless it's also divisible by 400
+        return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+    }
+    
+    // Test the function with various years and log the results to the console
+    console.log(leapyear(2016)); // Expected output: true
+    console.log(leapyear(2000)); // Expected output: true
+    console.log(leapyear(1700)); // Expected output: false
+    console.log(leapyear(1800)); // Expected output: false
+    console.log(leapyear(100));  // Expected output: false
+            </p></code>
+        </section>
+    </div>
+
+
+</body>
 </html>
