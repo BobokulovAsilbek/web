@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.js">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>My Website</h1>
+        <button id="night-vision-toggle">Night Vision Mode</button>
+    </nav>
+        
+    <div class="sol1">
+        <h1>Problem 4 Solution</h1>
+        <section class="snippet">
+            <pre><code id="text">// Define a function that animates the characters of a string
+    function animate_string(id) {
+    
+        // Get the HTML element by its id    
+        var element = document.getElementById(id);
+    
+        // Access the text node inside the element (assuming no other children)
+        var textNode = element.childNodes[0];
+    
+        // Extract the initial text content of the text node
+        var text = textNode.data;
+    
+        // Set up an interval to rotate the characters in the text every 100 milliseconds
+        setInterval(function () {
+            // Move the last character to the beginning of the string
+            text = text[text.length - 1] + text.substring(0, text.length - 1);
+    
+            // Update the text content of the text node with the modified string
+            textNode.data = text;
+        }, 100);
+    }</code></pre><div class="byuttton"><button id="show-text" type="button">Show Code</button>
+<button id="hide-text" type="button">Hide Code</button>
+<button id="copy-text" type="button">Copy Code</button></div>
+        </section>
+    </div>
+    
+
+    
+
+
+    <div class="sol1">
+        <h1>Problem 5 Solution</h1>
+        <section class="snippet">
+            <pre><code id="text">// Define a function that animates the characters of a string
+function animate_string(id) {
+    // Get the HTML element by its id
+    var element = document.getElementById(id);
+
+    // Access the text node inside the element (assuming no other children)
+    var textNode = element.childNodes[0];
+    
+    // Extract the initial text content of the text node
+    var text = textNode.data;
+
+    // Set up an interval to rotate the characters in the text every 100 milliseconds
+    setInterval(function () {
+        // Move the last character to the beginning of the string
+        text = text[text.length - 1] + text.substring(0, text.length - 1);
+
+        // Update the text content of the text node with the modified string
+        textNode.data = text;
+    }, 100);
+}</code></pre><div class="byuttton"><button id="show-text" type="button">Show Code</button>
+<button id="hide-text" type="button">Hide Code</button>
+<button id="copy-text" type="button">Copy Code</button></div>
+        </section>
+    </div>
+
+    <div class="sol1">
+        <h1>Problem 6 Solution</h1>
+        <section class="snippet">
+            <pre><code id="text">
+// Log a separator to visually distinguish the output
+console.log('--------------------');
+
+// Loop through the years from 2014 to 2050 (inclusive)
+for (var year = 2014; year <= 2050; year++) {
+    // Create a Date object for January 1st of the current year
+    var d = new Date(year, 0, 1);
+
+    // Check if January 1st is a Sunday (where Sunday corresponds to day index 0)
+    if (d.getDay() === 0) {
+        // Log a message if January 1st is a Sunday for the current year
+        console.log("1st January is being a Sunday  " + year);
+    }
+}
+
+// Log another separator to conclude the output
+console.log('--------------------'); 
+            </code></pre><div class="byuttton"><button id="show-text" type="button">Show Code</button>
+<button id="hide-text" type="button">Hide Code</button>
+<button id="copy-text" type="button">Copy Code</button></div>
+        </section>
+    </div>
+
+    <div class="sol1">
+        <h1>Problem 7 Solution</h1>
+        <section class="snippet">
+            <pre><code id="text">
+// Define a function to check if a given year is a leap year
+function leapyear(year) {
+    // Return true if the year is divisible by 4 but not divisible by 100 unless it's also divisible by 400
+    return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+}
+
+// Test the function with various years and log the results to the console
+console.log(leapyear(2016)); // Expected output: true
+console.log(leapyear(2000)); // Expected output: true
+console.log(leapyear(1700)); // Expected output: false
+console.log(leapyear(1800)); // Expected output: false
+console.log(leapyear(100));  // Expected output: false
+            </code></pre><div class="byuttton"><button id="show-text" type="button">Show Code</button>
+<button id="hide-text" type="button">Hide Code</button>
+<button id="copy-text" type="button">Copy Code</button></div>
+        </section>
+    </div>
+
+    <script src="sample.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    display: flex;
+    width: auto;
+    height: auto;
+    min-height: calc(100vh + 500px);
+    align-items: center;
+    justify-content: center;
+    background-color: hwb(115 59% 7%);
+    flex-wrap: wrap;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+    color: white;
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.night-vision {
+    background-color: #002400; 
+    color: #33ff33;
+}
+
+#night-vision-toggle {
+    padding: 10px 15px;
+    background-color: #004d00; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#night-vision-toggle:hover {
+    background-color: #006600; 
+}
+
+div{
+    display: flex;
+    border-radius: 20px;
+}
+.sol1{
+    width: auto;
+    height: auto;
+    min-height: calc(1vh + 200px);
+    background-color: rgb(52, 49, 216);
+    border: solid black;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+h1{
+    color: white;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.snippet{
+    display: block;
+    padding: 0rem 2rem;
+    overflow: auto;
+    font-size: 1.0em;
+    font-family: monospace;
+    white-space: pre;
+    background: lightgoldenrodyellow;
+    color: saddlebrown;
+    border-radius: 50px;
+}
+.byuttton{
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.night-vision {
+    background-color: #002400; 
+    color: #33ff33; 
+}
+
+#night-vision-toggle {
+    padding: 10px 20px;
+    background-color: #004d00; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#night-vision-toggle:hover {
+    background-color: #006600; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".snippet").forEach((snippet) => {
+    const textElement = snippet.querySelector("code"); 
+    const showButton = snippet.querySelector(".byuttton button:nth-child(1)"); 
+    const hideButton = snippet.querySelector(".byuttton button:nth-child(2)"); 
+    const copyButton = snippet.querySelector(".byuttton button:nth-child(3)");
+
+    if (!textElement || !showButton || !hideButton || !copyButton) {
+      console.error("One or more elements missing in a .snippet section");
+      return;
+    }
+
+    textElement.style.display = "none";
+
+    showButton.addEventListener("click", () => {
+      textElement.style.display = "block";
+    });
+
+    hideButton.addEventListener("click", () => {
+      textElement.style.display = "none";
+    });
+
+    copyButton.addEventListener("click", () => {
+      if (textElement.style.display !== "none") {
+        const textToCopy = textElement.innerText.trim(); 
+
+        const tempInput = document.createElement("textarea");
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        alert("Code copied to clipboard!");
+      } else {
+        alert("Code is hidden! Click 'Show Code' first.");
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleNightVision = document.getElementById("night-vision-toggle");
+
+  toggleNightVision.addEventListener("click", () => {
+      document.body.classList.toggle("night-vision");
+  });
+  
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const name = prompt("Enter your name:");
+  if (name) {
+      alert(`Hello, ${name}! Thank you for visiting.`);
+  } else {
+      alert("Hello! Please enter your name next time.");
+  }
+});
